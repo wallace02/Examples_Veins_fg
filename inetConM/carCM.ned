@@ -18,8 +18,10 @@ module carCM
 {
     parameters:
         @node();
-        *.interfaceTableModule = default(absPath(".interfaceTable"));
-        *.routingTableModule = default(absPath(".routingTable"));
+        **.interfaceTableModule = default(absPath(".interfaceTable"));
+        **.routingTableModule = default(absPath(".routingTable"));
+        **.icmpModule = default(absPath(".networkLayer.icmp"));
+        **.arpModule = default(absPath(".networkLayer.arp"));
 
         string routingProtocol @enum("AODVUU","DYMOUM","DYMO","DSRUU","OLSR","OLSR_ETX","DSDV_2","Batman") = default("");  // used mobile routing protocol. see: inet.networklayer.manetrouting
 
