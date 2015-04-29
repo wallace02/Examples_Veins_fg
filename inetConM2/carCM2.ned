@@ -25,7 +25,7 @@ module carCM2
         **.routingTableModule = default(absPath(".routingTable"));
         **.networkProtocolModule = default(absPath(".networkLayer.ip"));
         **.icmpModule = default(absPath(".networkLayer.icmp"));
-
+        //**.networkConfiguratorModule = default(absPath(".configurator"));
         int numRadios = default(1);
 
         @display("bgb=370,536");
@@ -46,7 +46,7 @@ module carCM2
 
         networkLayer: IPv4NetworkLayer {
             parameters:
-                proxyARP = false;
+                proxyARP = true;
                 @display("p=304,327;q=queue");
             gates:
                 ifIn[1];
@@ -84,6 +84,9 @@ module carCM2
             parameters:
                 @display("p=304,461,row,60;q=queue");
                 mgmtType = "Ieee80211MgmtAdhoc";  // use adhoc management
+                radio.carrierFrequency = 5.890GHz;
+                //radio.radioMediumModule = default(absPath(".radioMedium"));
+                //**.mobilityModule = default(absPath(".mobility"));
         }
 
     connections allowunconnected:

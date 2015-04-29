@@ -8,7 +8,9 @@ network scenarioCM2
 {
     submodules:
         radioMedium: Ieee80211ScalarRadioMedium {
-            @display("p=351,58");
+            parameters:
+                @display("p=351,58");
+                mediumLimitCache.carrierFrequency = 5.890GHz;
         }
 
         manager: TraCIScenarioManagerLaunchd {
