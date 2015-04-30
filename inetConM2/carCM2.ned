@@ -1,6 +1,6 @@
 package inetConM2;
 
-import inet.applications.traci.TraCIDemo;
+//import inet.applications.traci.TraCIDemo;
 import inet.linklayer.ieee80211.Ieee80211Nic;
 import inet.networklayer.common.InterfaceTable;
 import org.car2x.veins.modules.mobility.traci.TraCIMobility;
@@ -27,6 +27,7 @@ module carCM2
         **.icmpModule = default(absPath(".networkLayer.icmp"));
         //**.networkConfiguratorModule = default(absPath(".configurator"));
         int numRadios = default(1);
+        
 
         @display("bgb=370,536");
     gates:
@@ -84,7 +85,6 @@ module carCM2
             parameters:
                 @display("p=304,461,row,60;q=queue");
                 mgmtType = "Ieee80211MgmtAdhoc";  // use adhoc management
-                radio.carrierFrequency = 5.890GHz;
                 //radio.radioMediumModule = default(absPath(".radioMedium"));
                 //**.mobilityModule = default(absPath(".mobility"));
         }

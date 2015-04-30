@@ -1,6 +1,6 @@
 package inetConM;
 
-import inet.applications.traci.TraCIDemo;
+//import inet.applications.traci.TraCIDemo;
 import inet.linklayer.ieee80211.Ieee80211Nic;
 import inet.networklayer.common.InterfaceTable;
 import org.car2x.veins.modules.mobility.traci.TraCIMobility;
