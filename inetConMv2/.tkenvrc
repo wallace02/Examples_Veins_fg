@@ -1,4 +1,4 @@
 # Partial OMNeT++/Tkenv config file -- see $HOME/.tkenvrc as well
-config default-configname	{DYMO-Manhhatan}
+config default-configname	{AODVRouting-Manhattan}
 config default-runnumber	{0}
 
