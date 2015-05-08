@@ -10,7 +10,6 @@ network scenarioCM2
         radioMedium: Ieee80211ScalarRadioMedium {
             parameters:
                 @display("p=351,58");
-                mediumLimitCache.carrierFrequency = 5.890GHz;
         }
 
         manager: TraCIScenarioManagerLaunchd {
@@ -18,6 +17,8 @@ network scenarioCM2
         }
 
         configurator: IPv4NetworkConfigurator {
-            @display("p=42,111");
+            parameters:
+            	@display("p=42,111");
+            	config = xml("<config><interface hosts='*' address='10.x.x.x' netmask='255.x.x.x'/></config>");
         }
 }

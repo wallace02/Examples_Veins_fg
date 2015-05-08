@@ -13,11 +13,13 @@ import inet.networklayer.ipv4.IPv4RoutingTable;
 import inet.transportlayer.udp.UDP;
 import inet.applications.udpapp.UDPBasicBurst;
 import inet.networklayer.contract.IManetRouting;
+import inet.linklayer.loopback.LoopbackInterface;
 
 module carCM
 {
     parameters:
         @node();
+        @labels(node,ethernet-node,wireless-node);
         **.interfaceTableModule = default(absPath(".interfaceTable"));
         **.routingTableModule = default(absPath(".routingTable"));
         **.icmpModule = default(absPath(".networkLayer.icmp"));
@@ -25,6 +27,7 @@ module carCM
 
         string routingProtocol @enum("AODVUU","DYMOUM","DYMO","DSRUU","OLSR","OLSR_ETX","DSDV_2","Batman") = default("");  // used mobile routing protocol. see: inet.networklayer.manetrouting
 
+        @display("bgb=379,536");
     gates:
         input radioIn @directIn;
 
@@ -32,17 +35,17 @@ module carCM
         //        app: TraCIDemo11p {
         app: UDPBasicBurst {
             parameters:
-                @display("p=384,46");
+                @display("p=304,62");
         }
 
         udp: UDP {
             parameters:
-                @display("p=384,146");
+                @display("p=304,172");
         }
 
         networkLayer: IPv4NetworkLayer {
             parameters:
-                proxyARP = false;
+                //proxyARP = false;
                 @display("p=304,327;q=queue");
             gates:
                 ifIn[1];
@@ -50,7 +53,7 @@ module carCM
         }
 
         manetrouting: <routingProtocol> like IManetRouting if routingProtocol != "" {
-            @display("p=233,146");
+            @display("p=109,199");
         }
 
         interfaceTable: InterfaceTable {
@@ -81,18 +84,25 @@ module carCM
                 mgmtType = "Ieee80211MgmtAdhoc";  // use adhoc management
         }
 
+        lo0: LoopbackInterface {
+            @display("p=184,459");
+        }
+
     connections allowunconnected:
         udp.appOut++ --> app.udpIn;
         udp.appIn++ <-- app.udpOut;
 
         udp.ipOut --> networkLayer.transportIn++;
         udp.ipIn <-- networkLayer.transportOut++;
-        
+
         networkLayer.transportOut++ --> manetrouting.from_ip if routingProtocol != "";
         networkLayer.transportIn++ <-- manetrouting.to_ip if routingProtocol != "";
 
-        wlan.upperLayerOut --> networkLayer.ifIn[0];
-        wlan.upperLayerIn <-- networkLayer.ifOut[0];
+        wlan.upperLayerOut --> networkLayer.ifIn++;
+        wlan.upperLayerIn <-- networkLayer.ifOut++;
+        
+        lo0.upperLayerIn <-- networkLayer.ifOut++;
+        lo0.upperLayerOut --> networkLayer.ifIn++;
 
         radioIn --> wlan.radioIn;
 }
