@@ -19,7 +19,6 @@ module carCM2Dymo
 {
     parameters:
         @node();
-        @node();
         @labels(node,ethernet-node,wireless-node);
         **.interfaceTableModule = default(absPath(".interfaceTable"));
         **.routingTableModule = default(absPath(".routingTable"));
