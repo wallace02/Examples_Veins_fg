@@ -1,4 +1,4 @@
 # Partial OMNeT++/Tkenv config file -- see $HOME/.tkenvrc as well
-config default-configname	{AODVUU-Manhhatan}
+config default-configname	{DSRUU-FS}
 config default-runnumber	{0}
 
