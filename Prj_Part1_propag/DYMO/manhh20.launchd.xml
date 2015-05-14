@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!-- debug config -->
+<launch>
+	<copy file="manhh.net.xml" />
+	<copy file="manhh20.rou.xml" />
+	<copy file="manhh20.sumo.cfg" type="config" />
+</launch>
+

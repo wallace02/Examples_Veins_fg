@@ -1,0 +1,4 @@
+# Partial OMNeT++/Tkenv config file -- see $HOME/.tkenvrc as well
+config default-configname	{DYMOUM-FS-20}
+config default-runnumber	{0}
+
