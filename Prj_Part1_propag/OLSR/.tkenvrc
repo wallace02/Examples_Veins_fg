@@ -1,4 +1,4 @@
 # Partial OMNeT++/Tkenv config file -- see $HOME/.tkenvrc as well
-config default-configname	{DYMOUU-LNS-20}
+config default-configname	{OLSR-ETX-FS-25}
 config default-runnumber	{0}
 

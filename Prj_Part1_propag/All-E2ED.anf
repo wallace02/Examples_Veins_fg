@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+  <inputs>
+    <inputs name="/veins_fg/examples/Examples_Veins_fg/Prj_Part1_propag/AODV/results/*.vec"/>
+    <inputs name="/veins_fg/examples/Examples_Veins_fg/Prj_Part1_propag/AODV/results/*.sca"/>
+    <inputs name="/veins_fg/examples/Examples_Veins_fg/Prj_Part1_propag/DSR/results/*.vec"/>
+    <inputs name="/veins_fg/examples/Examples_Veins_fg/Prj_Part1_propag/DSR/results/*.sca"/>
+    <inputs name="/veins_fg/examples/Examples_Veins_fg/Prj_Part1_propag/DYMO/results/*.sca"/>
+    <inputs name="/veins_fg/examples/Examples_Veins_fg/Prj_Part1_propag/DYMO/results/*.vec"/>
+    <inputs name="/veins_fg/examples/Examples_Veins_fg/Prj_Part1_propag/OLSR/results/*.vec"/>
+    <inputs name="/veins_fg/examples/Examples_Veins_fg/Prj_Part1_propag/OLSR/results/*.sca"/>
+  </inputs>
+  <datasets>
+    <datasets name="AODV-25-FS">
+      <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND name(endToEndDelay:histogram:mean) AND attr:configname(AODVRouting-FS-25)"/>
+      <items xsi:type="scave:BarChart" name="End to End Delay Average">
+        <properties name="X.Axis.Title" value="Nodes"/>
+        <properties name="Y.Axis.Title" value="End-to-End-Delay (s)"/>
+        <averagedFields>name</averagedFields>
+      </items>
+    </datasets>
+    <datasets name="AODV-50-FS">
+      <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND name(endToEndDelay:histogram:mean) AND attr:configname(AODVRouting-FS-50)"/>
+    </datasets>
+    <datasets name="AODV-75-FS">
+      <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND name(endToEndDelay:histogram:mean) AND attr:configname(AODVRouting-FS-75)"/>
+    </datasets>
+    <datasets name="AODV-100-FS">
+      <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND name(endToEndDelay:histogram:mean) AND attr:configname(AODVRouting-FS-100)"/>
+    </datasets>
+    <datasets name="DSR-25-FS">
+      <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND name(endToEndDelay:histogram:mean) AND attr:configname(DSRUU-FS-25) "/>
+      <items xsi:type="scave:BarChart" name="End to End Delay Average">
+        <properties name="X.Axis.Title" value="Nodes"/>
+        <properties name="Y.Axis.Title" value="End-to-End-Delay (s)"/>
+        <averagedFields>name</averagedFields>
+      </items>
+    </datasets>
+    <datasets name="DSR-50-FS">
+      <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND name(endToEndDelay:histogram:mean) AND attr:configname(DSRUU-FS-50) "/>
+    </datasets>
+    <datasets name="DSR-75-FS">
+      <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND name(endToEndDelay:histogram:mean) AND attr:configname(DSRUU-FS-75) "/>
+    </datasets>
+    <datasets name="DSR-100-FS">
+      <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND name(endToEndDelay:histogram:mean) AND attr:configname(DSRUU-FS-100) "/>
+    </datasets>
+    <datasets name="DYMO-25-FS">
+      <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND name(endToEndDelay:histogram:mean) AND attr:configname(DYMOUM-FS-25) "/>
+      <items xsi:type="scave:BarChart" name="End to End Delay Average">
+        <properties name="X.Axis.Title" value="Nodes"/>
+        <properties name="Y.Axis.Title" value="End-to-End-Delay (s)"/>
+        <averagedFields>name</averagedFields>
+      </items>
+    </datasets>
+    <datasets name="DYMO-50-FS">
+      <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND name(endToEndDelay:histogram:mean) AND attr:configname(DYMOUM-FS-50) "/>
+    </datasets>
+    <datasets name="DYMO-75-FS">
+      <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND name(endToEndDelay:histogram:mean) AND attr:configname(DYMOUM-FS-75) "/>
+    </datasets>
+    <datasets name="DYMO-100-FS">
+      <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND name(endToEndDelay:histogram:mean) AND attr:configname(DYMOUM-FS-100) "/>
+    </datasets>
+    <datasets name="OLSR-25-FS">
+      <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND name(endToEndDelay:histogram:mean) AND attr:configname(OLSR-ETX-FS-25) "/>
+      <items xsi:type="scave:BarChart" name="End to End Delay Average">
+        <properties name="X.Axis.Title" value="Nodes"/>
+        <properties name="Y.Axis.Title" value="End-to-End-Delay (s)"/>
+        <averagedFields>name</averagedFields>
+      </items>
+    </datasets>
+    <datasets name="OLSR-50-FS">
+      <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND name(endToEndDelay:histogram:mean) AND attr:configname(OLSR-ETX-FS-50) "/>
+    </datasets>
+    <datasets name="OLSR-75-FS">
+      <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND name(endToEndDelay:histogram:mean) AND attr:configname(OLSR-ETX-FS-75) "/>
+    </datasets>
+    <datasets name="OLSR-100-FS">
+      <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND name(endToEndDelay:histogram:mean) AND attr:configname(OLSR-ETX-FS-100) "/>
+    </datasets>
+  </datasets>
+  <chartSheets>
+    <chartSheets name="default" charts="//@datasets/@datasets.0/@items.1 //@datasets/@datasets.4/@items.1 //@datasets/@datasets.8/@items.1 //@datasets/@datasets.12/@items.1"/>
+  </chartSheets>
+</scave:Analysis>
