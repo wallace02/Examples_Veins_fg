@@ -6,7 +6,6 @@ import inet.networklayer.common.InterfaceTable;
 import org.car2x.veins.modules.mobility.traci.TraCIMobility;
 import org.car2x.veins.modules.application.traci.TraCIDemo11p;
 
-
 import inet.networklayer.configurator.ipv4.HostAutoConfigurator;
 import inet.networklayer.ipv4.IPv4NetworkLayer;
 import inet.networklayer.ipv4.IPv4RoutingTable;
@@ -14,6 +13,7 @@ import inet.transportlayer.udp.UDP;
 import inet.applications.udpapp.UDPBasicBurst;
 import inet.networklayer.contract.IManetRouting;
 import inet.routing.aodv.AODVRouting;
+import inet.linklayer.loopback.LoopbackInterface;
 
 module carAODV
 {
@@ -27,7 +27,7 @@ module carAODV
         **.arpModule = default(absPath(".networkLayer.arp"));
         //**.networkConfiguratorModule = default(absPath(".configurator"));
         int numRadios = default(1);
-        
+
 
         @display("bgb=370,536");
     gates:
@@ -89,6 +89,10 @@ module carAODV
                 //**.mobilityModule = default(absPath(".mobility"));
         }
 
+        lo0: LoopbackInterface {
+            @display("p=167,461");
+        }
+
     connections allowunconnected:
         udp.appOut++ --> app.udpIn;
         udp.appIn++ <-- app.udpOut;
@@ -98,6 +102,9 @@ module carAODV
 
         networkLayer.transportOut++ --> aodv.ipIn;
         networkLayer.transportIn++ <-- aodv.ipOut;
+        
+        networkLayer.ifOut++ --> lo0.upperLayerIn;
+        lo0.upperLayerOut --> networkLayer.ifIn++;
 
         for i=0..sizeof(radioIn)-1 {
             radioIn[i] --> { @display("m=s"); } --> wlan[i].radioIn;
