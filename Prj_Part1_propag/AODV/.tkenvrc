@@ -1,4 +1,4 @@
 # Partial OMNeT++/Tkenv config file -- see $HOME/.tkenvrc as well
-config default-configname	{AODVRouting-FS-25}
+config default-configname	{AODVRouting-FS-25n}
 config default-runnumber	{0}
 
