@@ -120,3 +120,17 @@ Tcl error: moduleinspector.cc#631: ptr0x4077f40 not found
 "ModuleInspector:drawNextEventMarker .inspector17.c ptr0x4077f40 1"
 
 
+----------------------------------------------------------------------
+
+
+Tcl error: moduleinspector.cc#631: ptr0x44dedb0 not found
+    while executing
+"error "$tag not found""
+    (procedure "ModuleInspector:getSubmodCoords" line 4)
+    invoked from within
+"ModuleInspector:getSubmodCoords $c $modptr"
+    (procedure "ModuleInspector:drawNextEventMarker" line 2)
+    invoked from within
+"ModuleInspector:drawNextEventMarker .inspector0.c ptr0x44dedb0 2"
+
+
