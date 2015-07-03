@@ -19,6 +19,7 @@ module carPRJP1
 {
     parameters:
         @node();
+        @networkNode();
         @labels(node,ethernet-node,wireless-node);
         **.interfaceTableModule = default(absPath(".interfaceTable"));
         **.routingTableModule = default(absPath(".routingTable"));
