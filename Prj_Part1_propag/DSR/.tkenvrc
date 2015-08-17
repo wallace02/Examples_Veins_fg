@@ -1,4 +1,4 @@
 # Partial OMNeT++/Tkenv config file -- see $HOME/.tkenvrc as well
-config default-configname	{DSRUU-LNS-100n}
+config default-configname	{DSRUU-TRG-100n}
 config default-runnumber	{0}
 
