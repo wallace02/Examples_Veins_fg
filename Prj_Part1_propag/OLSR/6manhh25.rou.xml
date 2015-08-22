@@ -35,7 +35,7 @@
 -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
-    <vType id="car01" length="4.30" maxSpeed="33.33" speedDev="0.10">
+    <vType id="car01" length="4.30" maxSpeed="11.11" speedDev="0.10">
         <carFollowing-Krauss accel="2.80" decel="8.00"/>
     </vType>
     <vehicle id="0.0" type="car01" depart="0.00" color="cyan">
