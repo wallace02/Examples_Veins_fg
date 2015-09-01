@@ -1,4 +1,4 @@
 # Partial OMNeT++/Tkenv config file -- see $HOME/.tkenvrc as well
-config default-configname	{AODVRouting-TRG-10n}
+config default-configname	{AODVRouting-NAK-100n}
 config default-runnumber	{0}
 
