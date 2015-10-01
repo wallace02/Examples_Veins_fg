@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scave:Analysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:scave="http://www.omnetpp.org/omnetpp/scave">
+  <inputs>
+    <inputs name="/veins_fg/examples/Prj_Part1_propag2/40mps_v2/AODV2/*.sca"/>
+    <inputs name="/veins_fg/examples/Prj_Part1_propag2/40mps_v2/DSR2/*.sca"/>
+    <inputs name="/veins_fg/examples/Prj_Part1_propag2/40mps_v2/DYMO2/*.sca"/>
+    <inputs name="/veins_fg/examples/Prj_Part1_propag2/40mps_v2/OLSR2/*.sca"/>
+  </inputs>
+  <datasets>
+    <datasets name="FS-ALL">
+      <items xsi:type="scave:Group" name="10">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*FS-10n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+      <items xsi:type="scave:Group" name="25">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*FS-25n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+      <items xsi:type="scave:Group" name="50">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*FS-50n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+      <items xsi:type="scave:Group" name="75">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*FS-75n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+      <items xsi:type="scave:Group" name="100">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*FS-100n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+    </datasets>
+    <datasets name="LNS">
+      <items xsi:type="scave:Group" name="10">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*LNS-10n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+      <items xsi:type="scave:Group" name="25">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*LNS-25n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+      <items xsi:type="scave:Group" name="50">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*LNS-50n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+      <items xsi:type="scave:Group" name="75">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*LNS-75n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+      <items xsi:type="scave:Group" name="100">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*LNS-100n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+    </datasets>
+    <datasets name="TRG">
+      <items xsi:type="scave:Group" name="10">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*TRG-10n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+      <items xsi:type="scave:Group" name="25">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*TRG-25n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+      <items xsi:type="scave:Group" name="50">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*TRG-50n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+      <items xsi:type="scave:Group" name="75">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*TRG-75n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+      <items xsi:type="scave:Group" name="100">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*TRG-100n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+    </datasets>
+    <datasets name="NAK">
+      <items xsi:type="scave:Group" name="10">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*NAK-10n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+      <items xsi:type="scave:Group" name="25">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*NAK-25n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+      <items xsi:type="scave:Group" name="50">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*NAK-50n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+      <items xsi:type="scave:Group" name="75">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*NAK-75n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+      <items xsi:type="scave:Group" name="100">
+        <items xsi:type="scave:Add" filterPattern="run(*) AND module(*.app) AND attr:configname(*NAK-100n) AND (name(endToEndDelay:histogram:mean) OR name(rcvdPk:count) OR name(sentPk:count))"/>
+      </items>
+    </datasets>
+  </datasets>
+  <chartSheets>
+    <chartSheets name="default"/>
+  </chartSheets>
+</scave:Analysis>
